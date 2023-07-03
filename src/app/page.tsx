@@ -14,7 +14,7 @@ export default function Home() {
           <Overview />
           <div className="grid grid-cols-3 divide-x mt-5">
             <div className="col-span-2">
-              <Charts />
+              {/* <Charts /> */}
             </div>
             <div className="mt-5 pt-5">
               <Order title="Buy orders" value="0" />
