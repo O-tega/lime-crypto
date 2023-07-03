@@ -16,7 +16,7 @@ function SelectComponent() {
     <div>
       <Select
         defaultValue="none"
-        className="w-full border-white "
+        className="w-full border-white text-semibold"
         options={options}
       />
     </div>

@@ -29,13 +29,15 @@ function SideBar() {
           </div>
         ))}
       </ul>
-      <div className="flex justify-center mt-10 rounded-lg">
-        <div className="w-[200px] h-[85px] bg-white">
-          <SelectComponent />
-          <h1 className="text-xs">No website yet</h1>
+      <div className="flex justify-center mt-10  items-center ">
+        <div className="w-[200px] h-[85px] bg-white rounded-lg flex-col justify-center">
+          <div className="mt-2">
+            <SelectComponent />
+          </div>
+          <h1 className="text-xs mt-2 ml-1">No website yet</h1>
         </div>
       </div>
-      <div className="ml-7 mt-10">
+      <div className="ml-7 mt-16">
         <h1 className="text-normal font-semibold text-primary">Powered By</h1>
         <Image src="/theexchanger.png" alt="logo" width={138} height={22} />
       </div>
