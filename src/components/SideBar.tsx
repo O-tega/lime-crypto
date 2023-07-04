@@ -17,7 +17,7 @@ function SideBar() {
     <div className="w-[301px]  bg-dashboard ">
       <h1 className="letter pt-5 ml-7  ">MERCHANT ID | 110011</h1>
       <h1 className="letter ml-5 pt-14 ">YOUR OVERALL BALANCE</h1>
-      <h1 className="text-average ml-5  ">$ 0</h1>
+      <h1 className="text-average font-stacion ml-5  ">$ 0</h1>
       <ul className="mt-16">
         {dashBoardMenu.map((item) => (
           <div key={item.name}>

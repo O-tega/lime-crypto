@@ -1,6 +1,10 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 
+import localFont from 'next/font/local';
+
+const stacion = localFont({ src: '../assets/fonts/Stacion.otf', variable: '--font-stacion' });
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
@@ -15,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${stacion.variable} inter.className`}>{children}</body>
     </html>
   );
 }
