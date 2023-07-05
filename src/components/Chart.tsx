@@ -1,38 +1,57 @@
-// 'use client';
+'use client';
+
 import {
-  LineChart, Line, CartesianGrid, XAxis, YAxis,
+  LineChart, Line, Legend, Tooltip, ResponsiveContainer, CartesianGrid, XAxis, YAxis,
 } from 'recharts';
 
 const data = [
   {
-    name: 'Page A', uv: 400, pv: 2400, amt: 2400,
+    name: 'MongoDb',
+    student: 11,
+    fees: 120,
   },
   {
-    name: 'Page b', uv: 400, pv: 2400, amt: 2400,
+    name: 'Javascript',
+    student: 15,
+    fees: 12,
   },
   {
-    name: 'Page c', uv: 400, pv: 2400, amt: 2400,
+    name: 'PHP',
+    student: 5,
+    fees: 10,
   },
   {
-    name: 'Page d', uv: 400, pv: 2400, amt: 2400,
+    name: 'Java',
+    student: 10,
+    fees: 5,
   },
   {
-    name: 'Page e', uv: 400, pv: 2400, amt: 2400,
+    name: 'C#',
+    student: 9,
+    fees: 4,
   },
   {
-    name: 'Page f', uv: 400, pv: 2400, amt: 2400,
+    name: 'C++',
+    student: 10,
+    fees: 8,
   },
 ];
 
 function Charts() {
   return (
-    <LineChart width={600} height={300} data={data}>
-      <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-      <CartesianGrid stroke="#ccc" />
-      <XAxis dataKey="name" />
-      <YAxis />
-    </LineChart>
-
+    <div>
+      <ResponsiveContainer width="100%" height="100%" aspect={2}>
+        <LineChart data={data} margin={{ right: 300 }}>
+          <CartesianGrid />
+          <XAxis dataKey="name" interval="preserveStartEnd" />
+          <YAxis />
+          <Legend />
+          <Tooltip />
+          <Line dataKey="student" stroke="black" activeDot={{ r: 8 }} />
+          <Line dataKey="fees" stroke="red" activeDot={{ r: 8 }} />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
   );
 }
 

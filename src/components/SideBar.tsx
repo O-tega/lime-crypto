@@ -4,9 +4,19 @@ import { HiViewGrid } from 'react-icons/hi';
 import { HiOutlineClipboard } from 'react-icons/hi2';
 import { BiWallet, BiBarChartAlt2 } from 'react-icons/bi';
 import Image from 'next/image';
-import SelectComponent from './SelectComponent';
+import DropdownComponent from './DropdownComponent';
 
 function SideBar() {
+  const items = [
+    {
+      label: 'Kudi Exchange',
+      key: '1',
+    },
+    {
+      label: 'Kudi Exchange 1',
+      key: '2',
+    },
+  ];
   const dashBoardMenu = [
     { name: 'Dashboard', icon: <HiViewGrid size="30px" /> },
     { name: 'Orders', icon: <HiOutlineClipboard size="30px" /> },
@@ -31,10 +41,10 @@ function SideBar() {
       </ul>
       <div className="flex justify-center mt-10  items-center ">
         <div className="w-[200px] h-[85px] bg-white rounded-lg flex-col justify-center">
-          <div className="mt-2">
-            <SelectComponent />
+          <div className="pl-2 mt-2">
+            <DropdownComponent data={items} title="Kuda Exchange" />
           </div>
-          <h1 className="text-xs mt-2 ml-1">No website yet</h1>
+          <h1 className="text-xs mt-2 ml-2">No website yet</h1>
         </div>
       </div>
       <div className="ml-7 mt-16">
